@@ -4,10 +4,26 @@
  */
 package Domain;
 
-/**
- *
- * @author Laboratorio
- */
+import jakarta.persistence.*;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+@Entity
+@Table(name = "funciones")
 public class Funciones {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @ManyToOne
+    @JoinColumn(name = "id_pelicula")
+    private Peliculas pelicula;
+
+    private LocalDate fecha;
+    private LocalTime hora;
+    private String sala;
+
     
 }
