@@ -13,7 +13,8 @@ public class Usuario {
     private String nombre;
     private String correo;
     private String contrasena;
-    private String rol; // "ADMIN" o "USER"
+    private String rol; 
+
 
     public int getId() {
         return id;

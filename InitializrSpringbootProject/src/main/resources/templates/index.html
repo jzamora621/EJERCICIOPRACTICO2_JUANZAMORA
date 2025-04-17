@@ -1,33 +1,29 @@
 <!DOCTYPE html>
-<html lang="es">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cine - Cartelera</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <title>Teletran - Cine y Teatro</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 <body>
+    <header>
+        <h1>Teletran</h1>
+        <nav>
+            <ul>
+                <li><a th:href="@{/}">Inicio</a></li>
+                <li><a th:href="@{/cartelera}">Cartelera</a></li>
+                <li><a th:href="@{/contacto}">Contacto</a></li>
+                <li><a th:href="@{/login}">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
-    <h1>Bienvenidos al Cine</h1>
-    <nav>
-        <a href="/index">Inicio</a>
-        <a href="/login">Login</a>
-        <!-- Puedes agregar más enlaces aquí según sea necesario -->
-    </nav>
-</header>
+    <main>
+        <iframe width="100%" height="480" src="https://www.youtube.com/embed/CbX_SIz_9fk?si=0bZwsE0XNdukE262" frameborder="0" allowfullscreen></iframe>
+    </main>
 
-<div class="container">
-    <h2>Cartelera de Películas</h2>
-    <div class="movie-list">
-        <!-- Aquí va el contenido de la cartelera de películas -->
-        <p>¡Bienvenido! Revisa las películas que tenemos disponibles.</p>
-    </div>
-</div>
-
-<footer>
-    <p>&copy; 2025 Cine, Todos los derechos reservados</p>
-</footer>
-
+    <footer>
+        <p>&copy; 2025 Teletran - Todos los derechos reservados</p>
+    </footer>
 </body>
 </html>

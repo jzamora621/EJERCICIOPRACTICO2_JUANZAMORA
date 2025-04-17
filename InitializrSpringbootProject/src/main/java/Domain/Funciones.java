@@ -18,5 +18,35 @@ public class Funciones {
     private LocalDateTime fechaHora;
     private String sala;
 
-    // Getters y Setters
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Peliculas getPelicula() {
+        return pelicula;
+    }
+
+    public void setPelicula(Peliculas pelicula) {
+        this.pelicula = pelicula;
+    }
+
+    public LocalDateTime getFechaHora() {
+        return fechaHora;
+    }
+
+    public void setFechaHora(LocalDateTime fechaHora) {
+        this.fechaHora = fechaHora;
+    }
+
+    public String getSala() {
+        return sala;
+    }
+
+    public void setSala(String sala) {
+        this.sala = sala;
+    }
 }
