@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine - Películas</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Películas - Cine</h1>
+    </header>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/peliculas">Películas</a>
+        <a href="/funciones">Funciones</a>
+        <a href="/usuarios">Usuarios</a>
+        <a href="/login">Login</a>
+    </nav>
+
+    <div class="container">
+        <h2>Películas disponibles</h2>
+        <div>
+            <a href="/peliculas/guardar"><button>Agregar película</button></a>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Tipo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="pelicula : ${peliculas}">
+                    <td th:text="${pelicula.id}"></td>
+                    <td th:text="${pelicula.titulo}"></td>
+                    <td th:text="${pelicula.tipo}"></td>
+                    <td>
+                        <a th:href="@{/peliculas/eliminar/{id}(id=${pelicula.id})}">
+                            <button>Eliminar</button>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Cine - Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:replace="base :: *">
-<head><title>Inicio</title></head>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine - Cartelera</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
 <body>
-<div th:fragment="contenido">
-    <h2>Bienvenido al Cine Teatro Central</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+
+<header>
+    <h1>Bienvenidos al Cine</h1>
+    <nav>
+        <a href="/index">Inicio</a>
+        <a href="/login">Login</a>
+        <!-- Puedes agregar más enlaces aquí según sea necesario -->
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Cartelera de Películas</h2>
+    <div class="movie-list">
+        <!-- Aquí va el contenido de la cartelera de películas -->
+        <p>¡Bienvenido! Revisa las películas que tenemos disponibles.</p>
+    </div>
 </div>
+
+<footer>
+    <p>&copy; 2025 Cine, Todos los derechos reservados</p>
+</footer>
+
 </body>
 </html>
-

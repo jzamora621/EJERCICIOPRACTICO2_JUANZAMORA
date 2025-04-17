@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine - Funciones</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Funciones - Cine</h1>
+    </header>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/peliculas">Películas</a>
+        <a href="/funciones">Funciones</a>
+        <a href="/usuarios">Usuarios</a>
+        <a href="/login">Login</a>
+    </nav>
+
+    <div class="container">
+        <h2>Funciones disponibles</h2>
+        <div>
+            <a href="/funciones/guardar"><button>Agregar función</button></a>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Pelicula</th>
+                    <th>Fecha y Hora</th>
+                    <th>Sala</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="funcion : ${funciones}">
+                    <td th:text="${funcion.id}"></td>
+                    <td th:text="${funcion.pelicula.titulo}"></td>
+                    <td th:text="${funcion.fechaHora}"></td>
+                    <td th:text="${funcion.sala}"></td>
+                    <td>
+                        <a th:href="@{/funciones/eliminar/{id}(id=${funcion.id})}">
+                            <button>Eliminar</button>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Cine - Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
