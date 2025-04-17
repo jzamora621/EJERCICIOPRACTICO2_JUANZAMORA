@@ -4,10 +4,9 @@
  */
 package Dao;
 
-/**
- *
- * @author Laboratorio
- */
-public interface UsuarioDao {
-    
+import Domain.Usuario;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UsuarioDao extends JpaRepository<Usuario, Integer> {
+    Usuario findByCorreo(String correo);
 }

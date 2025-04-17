@@ -1,38 +1,57 @@
-
 package Domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.Table;
-import java.io.Serializable;
-import java.util.List;
-import lombok.Data;
-import javax.validation.constraints.NotEmpty;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "usuarios")
 public class Usuario {
-    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idUsuario;
-
-    @NotEmpty
-    private String username;
-
-    @NotEmpty
-    private String password;
+    private int id;
 
     private String nombre;
-    private String apellidos;
     private String correo;
-    private String telefono;
+    private String contrasena;
+    private String rol; // "ADMIN" o "USER"
 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
 }
-
-

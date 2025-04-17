@@ -4,10 +4,14 @@
  */
 package Service;
 
-/**
- *
- * @author Laboratorio
- */
+import Domain.Usuario;
+import java.util.List;
+
 public interface UsuarioService {
-    
+    List<Usuario> listar();
+    Usuario buscarPorId(int id);
+    Usuario buscarPorCorreo(String correo);
+    void guardar(Usuario usuario);
+    void eliminar(int id);
 }
+    
