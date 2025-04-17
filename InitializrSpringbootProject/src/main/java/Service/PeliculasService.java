@@ -1,13 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
 package Service;
 
-/**
- *
- * @author Laboratorio
- */
+import Domain.Peliculas;
+import java.util.List;
+
 public interface PeliculasService {
-    
+    List<Peliculas> listar();
+    Peliculas buscarPorId(int id);
+    Peliculas buscarPorTitulo(String titulo);
+    void guardar(Peliculas pelicula);
+    void eliminar(int id);
 }
